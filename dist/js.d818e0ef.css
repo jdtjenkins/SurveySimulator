@@ -1,0 +1,197 @@
+
+#section-picker .sections .section[data-v-d9a7ce] {
+  padding: 1rem;
+  padding-left: 2rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#section-picker .sections .section.active[data-v-d9a7ce] {
+  border-left: 2px solid #b8c480;
+}
+#section-picker .sections .section[data-v-d9a7ce]:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+#section-picker .sections .section h3[data-v-d9a7ce] {
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: "Abril Fatface", cursive;
+}
+#section-picker .sections .section hr[data-v-d9a7ce] {
+  width: 25%;
+  margin: 1rem 0;
+  padding: 0;
+}
+#section-picker .sections .section p[data-v-d9a7ce] {
+  font-size: 1rem;
+}
+#section-picker .sections .section .buttons[data-v-d9a7ce] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  height: 1.5rem;
+}
+#section-picker .sections .section .buttons .random[data-v-d9a7ce], #section-picker .sections .section .buttons .remove[data-v-d9a7ce] {
+  flex-grow: 1;
+  position: relative;
+  height: 1.5rem;
+}
+#section-picker .sections .section .buttons .random span[data-v-d9a7ce], #section-picker .sections .section .buttons .random svg[data-v-d9a7ce], #section-picker .sections .section .buttons .remove span[data-v-d9a7ce], #section-picker .sections .section .buttons .remove svg[data-v-d9a7ce] {
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transition: opacity 0.2s, left 0.2s, top 0.2s;
+}
+#section-picker .sections .section .buttons .random span[data-v-d9a7ce], #section-picker .sections .section .buttons .remove span[data-v-d9a7ce] {
+  left: 25%;
+  opacity: 0;
+}
+#section-picker .sections .section .buttons .random svg[data-v-d9a7ce], #section-picker .sections .section .buttons .remove svg[data-v-d9a7ce] {
+  left: 50%;
+}
+#section-picker .sections .section .buttons:hover span[data-v-d9a7ce] {
+  left: 50%;
+  opacity: 1;
+}
+#section-picker .sections .section .buttons:hover svg[data-v-d9a7ce] {
+  left: 10%;
+}
+#section-picker .sections .section .buttons .random[data-v-d9a7ce] {
+  color: #f9d357;
+}
+#section-picker .sections .section .buttons .remove[data-v-d9a7ce] {
+  color: #922d50;
+}.survey {
+  padding: 0 1rem;
+}
+.survey #inner p {
+  padding-bottom: 0;
+  border-bottom: 1px solid #fff;
+  transition: border-bottom-color 0.2s ease, padding-bottom 0.2s ease;
+  position: relative;
+}
+.survey #inner p:not(:last-child):before {
+  content: attr(data-section);
+  position: absolute;
+  pointer-events: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  top: 50%;
+  right: 110%;
+  transform: translateY(-50%);
+  color: #b8c480;
+  width: 150px;
+}
+.survey #inner p:not(:last-child):hover {
+  padding-bottom: 0.5rem;
+  border-bottom-color: #b8c480;
+}
+.survey #inner p:not(:last-child):hover:before {
+  opacity: 1;
+}
+.survey #inner p:last-child {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 992px) {
+  .survey {
+    max-width: 50%;
+  }
+}
+#survey-simulator[data-v-3371ec] {
+  height: 100vh;
+  max-height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+#survey-simulator .header[data-v-3371ec] {
+  width: 100%;
+  box-shadow: 3px 0 3px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 3;
+  background: linear-gradient(30deg, #f8cb39, #f9d357, #f8cb39);
+}
+#survey-simulator .header h1[data-v-3371ec] {
+  font-size: 2rem;
+  text-align: center;
+  font-family: "Abril Fatface", cursive;
+  font-weight: 500;
+  color: #333;
+}
+#survey-simulator #mobile-message[data-v-3371ec] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  padding: 2rem 1rem;
+  position: relative;
+}
+@media screen and (min-width: 992px) {
+#survey-simulator #mobile-message[data-v-3371ec] {
+    display: none;
+}
+}
+#survey-simulator #mobile-message .lazy-dev[data-v-3371ec] {
+  color: rgba(0, 0, 0, 0.3);
+  vertical-align: middle;
+  position: absolute;
+  bottom: 1rem;
+}
+#survey-simulator #mobile-message .lazy-dev span[data-v-3371ec] {
+  vertical-align: super;
+  font-size: 0.6rem;
+}
+#survey-simulator .container[data-v-3371ec] {
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+@media screen and (min-width: 992px) {
+#survey-simulator .container[data-v-3371ec] {
+    display: flex;
+}
+}
+#survey-simulator .container #left[data-v-3371ec], #survey-simulator .container #right[data-v-3371ec] {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+}
+#survey-simulator .container #left[data-v-3371ec] {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+@media screen and (min-width: 992px) {
+#survey-simulator .container #left[data-v-3371ec] {
+    max-width: 75%;
+}
+}
+#survey-simulator .container #right[data-v-3371ec] {
+  flex-shrink: 1;
+  display: none;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  justify-content: center;
+  max-width: 25%;
+  overflow-y: auto;
+}
+@media screen and (min-width: 992px) {
+#survey-simulator .container #right[data-v-3371ec] {
+    display: block;
+}
+}
