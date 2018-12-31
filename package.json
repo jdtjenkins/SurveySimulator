@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "npx parcel index.html --public-url /dist"
+    "start": "npx parcel index.html --public-url /SurveySimulator/dist"
   },
   "dependencies": {
     "portal-vue": "^1.4.0",
