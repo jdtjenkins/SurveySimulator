@@ -5,7 +5,7 @@
         class="section"
         v-for="section in sections"
         :class="{active: section.active}">
-        <h3>Add <v-template v-html="section.title"></v-template></h3>
+        <h3>Add <span v-html="section.title"></span></h3>
         <hr>
         <p>{{ section.description }}</p>
         <div class="buttons">
@@ -42,7 +42,7 @@
 
 <style lang="sass" scoped>
   @import '../sass/colours'
-  
+
   #section-picker
     .sections
       .section

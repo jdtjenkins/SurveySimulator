@@ -8721,7 +8721,7 @@ return index;
 })));
 
 
-},{"vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"../../../Users/Nick/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"../../../Users/Nick/AppData/Roaming/npm-cache/_npx/8084/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -8753,7 +8753,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../../../Users/Nick/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"../../../Users/Nick/AppData/Roaming/npm-cache/_npx/8084/node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -8788,7 +8788,7 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../Users/Nick/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
+},{"./bundle-url":"../../../Users/Nick/AppData/Roaming/npm-cache/_npx/8084/node_modules/parcel/src/builtins/bundle-url.js"}],"node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
 var Vue // late bind
 var version
 var map = Object.create(null)
@@ -9101,16 +9101,10 @@ exports.default = _default;
           "div",
           { staticClass: "section", class: { active: section.active } },
           [
-            _c(
-              "h3",
-              [
-                _vm._v("Add "),
-                _c("v-template", {
-                  domProps: { innerHTML: _vm._s(section.title) }
-                })
-              ],
-              1
-            ),
+            _c("h3", [
+              _vm._v("Add "),
+              _c("span", { domProps: { innerHTML: _vm._s(section.title) } })
+            ]),
             _vm._v(" "),
             _c("hr"),
             _vm._v(" "),
@@ -9190,7 +9184,7 @@ render._withStripped = true
       
       }
     })();
-},{"_css_loader":"../../../Users/Nick/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/js/survey.component.vue":[function(require,module,exports) {
+},{"_css_loader":"../../../Users/Nick/AppData/Roaming/npm-cache/_npx/8084/node_modules/parcel/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/js/survey.component.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -9254,7 +9248,7 @@ render._withStripped = true
       
       }
     })();
-},{"_css_loader":"../../../Users/Nick/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/js/app.component.vue":[function(require,module,exports) {
+},{"_css_loader":"../../../Users/Nick/AppData/Roaming/npm-cache/_npx/8084/node_modules/parcel/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/js/app.component.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -9297,6 +9291,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
 var _default = {
   name: 'app-component',
   components: {
@@ -9305,6 +9300,7 @@ var _default = {
   },
   data: function data() {
     return {
+      name: '',
       survey: {
         opener: {
           title: "an <span class=\"title\">opener</span>",
@@ -9330,23 +9326,14 @@ var _default = {
           title: "a <span class=\"title\">Coffee Stain reference</span>",
           description: 'Just a quick little nod to the developers, let them know how much you enjoy their games with a very obscure reference that, probably only the devs would get.',
           value: ''
-        } // Yeah not sure this section was really that good an idea
-        // rambling: {
-        //   title: `whaaaaaaa...?`,
-        //   description: 'So I went to Morganville, which was what they called Shelbyville in those days. I tied an onion to my belt, which was the style at the time. Now today the ferry costs a nickel...',
-        //   value: '',
-        // },
-
+        }
       },
       wittyStuff: {
-        opener: ["Hey, It's me, Jumper; your friendly neighbourhood LazyDev<sup>TM</sup>. I saw your alpha key survey and thought to myself \"Hey. Why should I have to fill in a survey? Can't something else do it for me?\". Turns out - yes it can!", "To Whom it may concern,", "Yo yo yo waddup it's lil J, heard a lil somethin bout some keys", "To my dearest Jace", "I'm not sure what this is, but hey since I'm here:", "Dear Caterina Parks,", "JAAAAA"],
+        opener: ["Hey, how's it going? I saw your alpha key survey and thought to myself \"Hey. Why should I have to fill in a survey? Can't something else do it for me?\". Turns out - yes it can!", "To Whom it may concern,", "Yo yo yo waddup it's lil J, heard a lil somethin bout some keys", "To my dearest Jace", "I'm not sure what this is, but hey since I'm here:", "Dear Caterina Parks,", "JAAAAA"],
         middle: ["I wrote this basically... I don't really know why anymore... But hey, it may be a good quick laugh for the Coffee Stain office? Click the buttons on the right, go crazy, pick your best paragraph and that is my answer to the survey.", "I am a factory expert. I am a connoisseur of pipes and petroleum. I have built train netorks the likes of which... The world has never seen the likes of which!", "Ima here to get crazy up in this. I see yo factory, yo bug dogs and ima sayin ima build this motha from the ground homie", "Please oh please sir may I have an alpha key! It's my biggest wish ever! Ever since I found out I had to apply just yesterday.", "Gimme the damn key, fool!", "Keys and me... Me and keys... That's been quite the roller coaster hasn't it?", "Jag talar inte svenska, men kanske n\xE5gra trevliga Google \xF6versatta svenska hj\xE4lper dig att best\xE4mma om min ans\xF6kan.", "... No seriously... Is this like a Minecraft thing or...?", "Chop chop, dig dig. Chop chop, dig dig. Chop cop, dig dig.", "Yeeeah if you could go ahead and get that key on my desk by 5, that'd be great.", "I'm really only buying this game for lizard doggos...", "CCCCCCCC"],
         ending: ["Yeah so to sum up, keep doing what you're doing. Stay cool, love ya lots, can't wait for Sanctumorio Simulator!", "Not too sure how to end this... Not sure if this is the answer you were looking for... Welp, it's been fun... ", "Hejd\xE5 min \xE4lskling. Vi ses v\xE4ldigt snart p\xE5 fabriken. Du tar r\xF6ren, jag tar med K\xF6ttbullar. Makes sense? Who knows... Google translate mate.", "Yeah I just needed to bump the numbers of endings up... Kept getting the same ones over and over... Another great product from the LazyDev<sup>TM</sup>... Ya'll ever see that film the Martian? I hope we can grow potatoes in this game... Yep... Potatoes...", "Thank you for checking out Survey Simulator, I hope it was at least marginally better than an answer full of obscure Factorio references. The hype for this game is 10/10 and I can't wait to get building.", "This whole thing would've been done quicker, but I had to go back and play everything Coffee Stain again.", "EEEEEEE!!!"],
         coffeeStainRefence: ["Sup, I don't know if you'll even ever see this, but if you do tell Leonard they are awesome!", "BLOOD FOR THE BLOOD GOAT!", "Something something Skye Autumn something something.", "Yeah I mean this game looks ok... But I think I'll wait for the Yogscast DLC though tbh.", "Sanctum 3 when?", "Jeez Coffee Stain and their simulators... Alien simulator, Goat simulator, Nephew simulator, Factory simulator", "I mean this isn't really a reference... But hot damn that moment when you step out the cave with the one-eyed monster and see absolute scale of the other village... Damn"],
-        joke: ["Hey so yeah let's get some jokes going, lighten the mood... What do you call a goat with one ear? Van Goat...", "Oh jeez, is this section meant to be funny?", "What do you call a goat at sea? Billy Ocean", "What do you call a goat playing the piano? Billy Joel", "Jeez these are terrible... They are terribly baaaad", "I don't know... Something about how Goat Simulator is actually Kendrick Lamar simulator... But it'd be GOAT simulator... I don't know, it's late, I don't know why I'm stil making this...", "I don't know if these translate well to Swedish... Let's try it: Vad kallar du en get som vet kampsport? Karate barn. Hahahaha omg amirite", "Hey what's the capital of Sweden? <strong>Goat</strong>enberg...... It's... It's actually Stockholm. I've seen Eurovision."] // rambling: [
-        //   `I remember when `
-        // ]
-
+        joke: ["Hey so yeah let's get some jokes going, lighten the mood... What do you call a goat with one ear? Van Goat...", "Oh jeez, is this section meant to be funny?", "What do you call a goat at sea? Billy Ocean", "What do you call a goat playing the piano? Billy Joel", "Jeez these are terrible... They are terribly baaaad", "I don't know... Something about how Goat Simulator is actually Kendrick Lamar simulator... But it'd be GOAT simulator... I don't know, it's late, I don't know why I'm stil making this...", "I don't know if these translate well to Swedish... Let's try it: Vad kallar du en get som vet kampsport? Karate barn. Hahahaha omg amirite", "Hey what's the capital of Sweden? <strong>Goat</strong>enberg...... It's... It's actually Stockholm. I've seen Eurovision."]
       }
     };
   },
@@ -9358,7 +9345,7 @@ var _default = {
         if (_this.survey[key].value !== '') {
           return "<p data-section=\"The ".concat(key, "\">").concat(_this.survey[key].value, "</p>");
         }
-      }).join(' '), "\n        <p>Thanks,<br>Jumper</p>\n      ");
+      }).join(' '), "\n        <p>Thanks,<br>").concat(this.name, "</p>\n      ");
     },
     sectionKeys: function sectionKeys() {
       var _this2 = this;
@@ -9391,6 +9378,7 @@ var _default = {
     this.survey.opener.value = this.wittyStuff.opener[0];
     this.survey.middle.value = this.wittyStuff.middle[0];
     this.survey.ending.value = this.wittyStuff.ending[0];
+    this.wittyStuff.opener[0] = "Hey, It's me, ".concat(this.getName, "; your friendly neighbourhood LazyDev<sup>TM</sup>. I saw your alpha key survey and thought to myself \"Hey. Why should I have to fill in a survey? Can't something else do it for me?\". Turns out - yes it can!");
   }
 };
 exports.default = _default;
@@ -9419,6 +9407,27 @@ exports.default = _default;
           "div",
           { attrs: { id: "left" } },
           [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.name,
+                  expression: "name"
+                }
+              ],
+              attrs: { type: "text", placeholder: "Your name" },
+              domProps: { value: _vm.name },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.name = $event.target.value
+                }
+              }
+            }),
+            _vm._v(" "),
             _c("survey-component", [
               _c("div", {
                 attrs: { id: "inner" },
@@ -9511,7 +9520,7 @@ render._withStripped = true
       
       }
     })();
-},{"./section-picker.component":"src/js/section-picker.component.vue","./survey.component":"src/js/survey.component.vue","_css_loader":"../../../Users/Nick/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/js/index.js":[function(require,module,exports) {
+},{"./section-picker.component":"src/js/section-picker.component.vue","./survey.component":"src/js/survey.component.vue","_css_loader":"../../../Users/Nick/AppData/Roaming/npm-cache/_npx/8084/node_modules/parcel/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/js/index.js":[function(require,module,exports) {
 "use strict";
 
 var _vue = _interopRequireDefault(require("vue"));
@@ -9530,7 +9539,7 @@ new _vue.default({
     return h(_app.default);
   }
 });
-},{"vue":"node_modules/vue/dist/vue.runtime.esm.js","portal-vue":"node_modules/portal-vue/dist/portal-vue.js","./app.component":"src/js/app.component.vue"}],"../../../Users/Nick/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"vue":"node_modules/vue/dist/vue.runtime.esm.js","portal-vue":"node_modules/portal-vue/dist/portal-vue.js","./app.component":"src/js/app.component.vue"}],"../../../Users/Nick/AppData/Roaming/npm-cache/_npx/8084/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -9557,7 +9566,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58118" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63252" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
@@ -9699,4 +9708,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},["../../../Users/Nick/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/js/index.js"], null)
+},{}]},{},["../../../Users/Nick/AppData/Roaming/npm-cache/_npx/8084/node_modules/parcel/src/builtins/hmr-runtime.js","src/js/index.js"], null)
+//# sourceMappingURL=/dist/js.d818e0ef.map

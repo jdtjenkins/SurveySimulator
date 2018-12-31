@@ -11,6 +11,7 @@
     </div>
     <div class="container">
       <div id="left">
+        <input type="text" v-model="name" placeholder="Your name">
         <survey-component>
           <div id="inner" v-html="surveyComputed"></div>
         </survey-component>
@@ -39,6 +40,8 @@
     },
     data() {
       return {
+        name: '',
+
         survey: {
           opener: {
             title: `an <span class="title">opener</span>`,
@@ -65,16 +68,11 @@
             description: 'Just a quick little nod to the developers, let them know how much you enjoy their games with a very obscure reference that, probably only the devs would get.',
             value: '',
           },
-          // Yeah not sure this section was really that good an idea
-          // rambling: {
-          //   title: `whaaaaaaa...?`,
-          //   description: 'So I went to Morganville, which was what they called Shelbyville in those days. I tied an onion to my belt, which was the style at the time. Now today the ferry costs a nickel...',
-          //   value: '',
-          // },
         },
+
         wittyStuff: {
           opener: [
-            `Hey, It's me, Jumper; your friendly neighbourhood LazyDev<sup>TM</sup>. I saw your alpha key survey and thought to myself "Hey. Why should I have to fill in a survey? Can't something else do it for me?". Turns out - yes it can!`,
+            `Hey, how's it going? I saw your alpha key survey and thought to myself "Hey. Why should I have to fill in a survey? Can't something else do it for me?". Turns out - yes it can!`,
             `To Whom it may concern,`,
             `Yo yo yo waddup it's lil J, heard a lil somethin bout some keys`,
             `To my dearest Jace`,
@@ -125,9 +123,6 @@
             `Hey what's the capital of Sweden? <strong>Goat</strong>enberg...... It's... It's actually Stockholm. I've seen Eurovision.`,
 
           ],
-          // rambling: [
-          //   `I remember when `
-          // ]
         }
       }
     },
@@ -139,7 +134,7 @@
               return `<p data-section="The ${key}">${ this.survey[key].value }</p>`;
             }
           }).join(' ')}
-          <p>Thanks,<br>Jumper</p>
+          <p>Thanks,<br>${ this.name }</p>
         `;
       },
       sectionKeys() {
@@ -170,7 +165,7 @@
     created() {
       this.survey.opener.value = this.wittyStuff.opener[0];
       this.survey.middle.value = this.wittyStuff.middle[0];
-      this.survey.ending.value = this.wittyStuff.ending[0];
+      this.survey.ending.value = this.wittyStuff.ending[0];this.wittyStuff.opener[0] = `Hey, It's me, ${ this.getName }; your friendly neighbourhood LazyDev<sup>TM</sup>. I saw your alpha key survey and thought to myself "Hey. Why should I have to fill in a survey? Can't something else do it for me?". Turns out - yes it can!`;
     }
   }
 </script>
@@ -217,7 +212,6 @@
         display: none
 
       .lazy-dev
-        //margin-top: auto
         color: rgba(0, 0, 0, 0.3)
         vertical-align: middle
         position: absolute
@@ -253,6 +247,15 @@
 
         @media screen and (min-width: 992px)
           max-width: 75%
+
+        & > input
+          width: 50%
+          border: 0
+          background: white
+          border-bottom: 1px solid lighten($dark, 60%)
+          margin: 0 -1rem
+          padding: 0.5rem 1rem
+          font-weight: 300
 
 
       #right
